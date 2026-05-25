@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.env
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Checkpoints (large binary files)
+checkpoints_act/
+checkpoints_diffusion/
+
+
+# Logs
+logs_act/
+logs_diffusion/
+logs_diffusion_v4_resume/
+*.log
+train_diffusion.log
+log.md
+
+# Eval videos
+eval_videos/
+eval_plots/
+
+# Data (large, should be downloaded separately)
+data/
+.data/
+
+# LeRobot (vendored, not part of this repo)
+lerobot/
+
+# Ruff
+.ruff_cache/
+
+# OS
+.DS_Store
+Thumbs.db

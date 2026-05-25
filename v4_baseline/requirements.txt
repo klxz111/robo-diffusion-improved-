@@ -1,0 +1,29 @@
+# =============================================================================
+# V4 Diffusion Policy — 环境依赖
+# =============================================================================
+# 安装: pip install -r requirements.txt
+# PyTorch 请根据 CUDA 版本单独安装: https://pytorch.org/get-started/locally/
+
+# ── 基础框架 ─────────────────────────────────────────────────────────────────
+torch>=2.0.0
+numpy
+tqdm
+matplotlib
+
+# ── 环境与仿真 ──────────────────────────────────────────────────────────────
+gymnasium>=0.28
+gym-pusht
+
+# ── 模型 ────────────────────────────────────────────────────────────────────
+mamba-ssm              # Mamba state-space model (requires CUDA)
+diffusers              # DDPM / DDIM schedulers (from huggingface)
+
+# ── 数据与评测 ──────────────────────────────────────────────────────────────
+lerobot                # LeRobot dataset (pusht 数据集加载)
+opencv-python          # 视频处理 (test.py)
+imageio                # 视频写入 (test.py)
+imageio-ffmpeg         # FFmpeg backend for imageio
+
+# ── 视觉骨干 ────────────────────────────────────────────────────────────────
+# DINO v1 vits8: torch.hub.load("facebookresearch/dino:main", "dino_vits8")
+# 在 vit_backbone.py 中通过 torch.hub 自动加载，无需额外 pip install
